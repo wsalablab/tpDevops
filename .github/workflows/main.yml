@@ -32,6 +32,13 @@ jobs:
       - uses: actions/cache@v2
         env:
           cache-name: cache-node-modules
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
