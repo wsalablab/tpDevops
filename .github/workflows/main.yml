@@ -28,6 +28,10 @@ jobs:
       - uses : actions/setup-node@v1
         with : 
           node-version: 12.x
+          
+      - uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
