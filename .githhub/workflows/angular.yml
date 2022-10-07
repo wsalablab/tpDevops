@@ -41,3 +41,5 @@ steps:
   run: npm run build -- --prod
 - name: Lint
   run: npm run lint
+- name: Test
+  run: npm run test -- --prod
