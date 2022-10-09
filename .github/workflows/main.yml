@@ -46,7 +46,7 @@ jobs:
         run: |
           npm ci
       - name: Install  
-         npm install --save-dev @angular/cli@latest
+        run: npm install --save-dev @angular/cli@latest
           
       - name: Build
         run: npm run build --
