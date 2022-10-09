@@ -45,7 +45,8 @@ jobs:
         if: steps.cache-nodemodules.outputs.cache-hit != 'true'
         run: |
           npm ci
-      # npm install --save-dev @angular/cli@latest
+      - name: Install  
+         npm install --save-dev @angular/cli@latest
           
       - name: Build
         run: npm run build --
