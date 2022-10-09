@@ -13,17 +13,17 @@ module.exports = function (config) {
       require('@angular-devkit/build-angular/plugins/karma')
     ],
     client: {
-      //jasmine: { //mod1
+      jasmine: { //mod1
         // you can add configuration options for Jasmine here
         // the possible options are listed at https://jasmine.github.io/api/edge/Configuration.html
         // for example, you can disable the random execution with `random: false`
         // or set a specific seed with `seed: 4321`
-      //}, //mod1
+      }, //mod1
       clearContext: false // leave Jasmine Spec Runner output visible in browser
     },
-    //jasmineHtmlReporter: { //mod1
-    //  suppressAll: true // removes the duplicated traces //mod1
-    //}, //mod1
+    jasmineHtmlReporter: { //mod1
+      suppressAll: true // removes the duplicated traces //mod1
+    }, //mod1
     coverageReporter: {
       dir: require('path').join(__dirname, './coverage/my-app'),
       subdir: '.',
@@ -39,11 +39,6 @@ module.exports = function (config) {
     autoWatch: true,
     browsers: ['Chrome'],
     singleRun: false,
-    restartOnFileChange: true,
-    customLaunchers: {
-      ChromeHeadlessPuppeteer: {
-        base: 'ChromeHeadless',
-        flags: ['--no-sandbox', '--disable-gpu']
-      }
+    restartOnFileChange: true
   });
 };
