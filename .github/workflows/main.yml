@@ -23,11 +23,11 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       
-      - uses : actions/setup-node@v1
+      - uses : actions/setup-node@v3
         with : 
-          node-version: 16.x
+          node-version: 16
           
       - uses: actions/cache@v2
         env:
@@ -45,6 +45,7 @@ jobs:
         if: steps.cache-nodemodules.outputs.cache-hit != 'true'
         run: |
           npm ci
+          npm test
       - name: Install  
         run: npm install --save-dev @angular/cli@latest
           
