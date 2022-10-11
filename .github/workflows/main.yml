@@ -2,11 +2,6 @@
 
 name: CI
 
-<<<<<<< HEAD
-# Controls when the workflow will run  i  
-=======
-# Controls when the workflow will run 
->>>>>>> 07d455b57d65817cc53fca0ca7a4d4a7edc4b140
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
