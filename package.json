@@ -5,10 +5,10 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-   //new
+    
     "build": "ng serve",
     "test:prod": "ng test --browsers=ChromeHeadless --watch=false --code-coverage",
-   //end new 
+    
     "watch": "ng build --watch --configuration development",
     "test": "ng test --watch=false --browsers=ChromeHeadlessPuppeteer",
     "deploy": "ng deploy --base-href=/tpDevops/ --email='salablab.wassim@gmail.com' --branch='page' --no-silent"
