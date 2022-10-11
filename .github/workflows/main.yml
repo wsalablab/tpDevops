@@ -62,9 +62,14 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           
-      - name: Conventional Changelog ction
+      - name: Conventional Changelog action
         id: changelog
         uses: TriPSs/conventional-changelog-action@v3
+        with:
+          github-token: ${{ secrets.TOKEN_GITHUB_ACTION }}
+          output-file: 'false'
+      - name: Create Release
+        uses: actions/create-release@v1
         if: ${{ steps.changelog.outputs.skipped == 'false' }}
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN_GITHUB_ACTION }}
