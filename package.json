@@ -4,8 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
-    "build": "ng serve",    
+    "build": "ng serve",
     "watch": "ng build --watch --configuration development",
     "ci:test": "ng test --watch=false --browsers=ChromeHeadlessCustom --code-coverage",
     "deploy": "ng deploy --base-href=/tpDevops/ --email='salablab.wassim@gmail.com' --branch='page' --no-silent"
@@ -22,6 +21,7 @@
     "@angular/platform-browser": "^14.2.0",
     "@angular/platform-browser-dynamic": "^14.2.0",
     "@angular/router": "^14.2.0",
+    "ci": "^2.2.0",
     "eslint": "^8.25.0",
     "i": "^0.3.7",
     "lint": "^1.1.2",
