@@ -29,6 +29,7 @@
     "ci": "^2.2.0",
     "eslint": "^8.25.0",
     "i": "^0.3.7",
+    "karma-coverage-istanbul-reporter": "^3.0.3",
     "lint": "^1.1.2",
     "npm": "^8.19.2",
     "rxjs": "~7.5.0",
