@@ -50,7 +50,8 @@ jobs:
         run: npm run build --
       
       - name: test
-        run: npm test -- --watch=false --browsers=ChromeHeadlessCI
+          npm run ci:test
+      #  run: npm test -- --watch=false --browsers=ChromeHeadlessCI
         
      # - name: Lint
      #   run: npm run lint
