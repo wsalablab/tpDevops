@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "ci:clean": "rimraf ./dist",
-    "ci:test": "ng test --watch=false --browsers=ChromeHeadlessCustom --code-coverage",
+    "ci:test": "ng test --watch=false --code-coverage",
     "ci:build": "ng build --prod",
     "e2e": "ng e2e",
     "watch": "ng build --watch --configuration development",
