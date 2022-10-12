@@ -40,17 +40,29 @@ jobs:
 
       # Runs a single command using the runners 
       - name: Install dependencies
-        if: steps.cache-nodemodules.outputs.cache-hit != 'true'
-        run: |
-          npm ci
+      #  if: steps.cache-nodemodules.outputs.cache-hit != 'true'
+        run: npm ci
+        
       - name: Install  
         run: npm install --save-dev @angular/cli@latest
+        
+      - name: Cache node modules
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-  
+      
+      - name: test
+        run: npm run ci:test
+        
+      - name: Clean Distribution Directory
+        run: npm run ci:clean
           
       - name: Build
         run: npm run build --
       
-      - name: test
-        run: npm run ci:test
       #  run: npm test -- --watch=false --browsers=ChromeHeadlessCI
         
      # - name: Lint
