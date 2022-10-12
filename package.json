@@ -5,8 +5,13 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng serve",
-    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
+    "lint": "ng lint",
+    "ci:clean": "rimraf ./dist",
     "ci:test": "ng test --watch=false --browsers=ChromeHeadlessCustom --code-coverage",
+    "ci:build": "ng build --prod"
+    "e2e": "ng e2e",
+    "watch": "ng build --watch --configuration development",
     "deploy": "ng deploy --base-href=/tpDevops/ --email='salablab.wassim@gmail.com' --branch='page' --no-silent"
   },
   "private": true,
