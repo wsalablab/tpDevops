@@ -5,10 +5,9 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    
     "build": "ng serve",    
     "watch": "ng build --watch --configuration development",
-    "test": "ng test --watch=false --browsers=ChromeHeadlessCustom",
+    "ci:test": "ng test --watch=false --browsers=ChromeHeadlessCustom --code-coverage",
     "deploy": "ng deploy --base-href=/tpDevops/ --email='salablab.wassim@gmail.com' --branch='page' --no-silent"
   },
   "private": true,
