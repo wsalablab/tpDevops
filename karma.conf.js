@@ -7,10 +7,10 @@ module.exports = function (config) {
     frameworks: ['jasmine', '@angular-devkit/build-angular'],
     browsers: ['Chrome', 'ChromeHeadlessCustom'],
     customLaunchers: {
-      ChromeHeadlessCustom: {
-        base: 'ChromeHeadless',
-        flags: ['--no-sandbox', '--disable-gpu']
-      }
+        ChromeHeadlessCustom: {
+            base: 'ChromeHeadless',
+            flags: ['--no-sandbox', '--disable-gpu']
+        }
     },
     plugins: [
       require('karma-jasmine'),
@@ -26,7 +26,7 @@ module.exports = function (config) {
       dir: require('path').join(__dirname, './coverage'),
       reports: ['html', 'lcovonly', 'text-summary'],
       fixWebpackSourcePaths: true
-    }, 
+    },
     reporters: ['progress', 'kjhtml'],
     port: 9876,
     colors: true,
