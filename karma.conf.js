@@ -5,7 +5,7 @@ module.exports = function (config) {
   config.set({
     basePath: '',
     frameworks: ['jasmine', '@angular-devkit/build-angular'],
-    browsers: ['Chrome', 'ChromeHeadlessCustom'],
+    browsers: ['ChromeHeadlessCustom'],
     customLaunchers: {
         ChromeHeadlessCustom: {
             base: 'ChromeHeadless',
